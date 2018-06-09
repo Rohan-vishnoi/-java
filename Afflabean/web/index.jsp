@@ -28,11 +28,13 @@
     <a href="#">
         <img src="#" id="logo" alt="Affable Bean logo">
     </a>
-     <img src="#" id="logoText" alt="the affable bean">
+       <h1>the affable bean</h1>>
    </div>
 
         <div id="indexLeftColumn">
-            left column
+            <div id="welcomeText">
+        <p>[ welcome text ]</p>
+    </div>
         </div>
 
         <div id="indexRightColumn">
@@ -59,7 +61,9 @@
         </div>
 
         <div id="footer">
-            footer
+            <hr>
+    <p id="footerText">[ footer text ]</p>
+
         </div>
     </div>
 </body>

@@ -20,12 +20,14 @@ body {
     height: 250px;
     background: #aaa;
 }
-
 #footer {
     height: 60px;
+    width: 350px;
     clear: left;
     background: #aaa;
 }
+
+
 
 #indexLeftColumn {
     height: 400px;
@@ -90,4 +92,11 @@ body {
 .categoryLabelText {
     line-height: 150%;
     font-size: x-large;
+}
+hr {
+    border: 0;
+    background-color: #333;
+    height: 1px;
+    margin: 0 25px;
+    width: 300px;
 }
