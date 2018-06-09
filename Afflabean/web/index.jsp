@@ -28,7 +28,7 @@
     <a href="#">
         <img src="#" id="logo" alt="Affable Bean logo">
     </a>
-       <h1>the affable bean</h1>>
+       <img src="#" id="logoText" alt="the affable bean">
    </div>
 
         <div id="indexLeftColumn">
