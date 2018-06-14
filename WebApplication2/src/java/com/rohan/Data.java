@@ -1,15 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.rohan;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import org.hibernate.Session;
 
-@ManagedBean;
-@SessionScoped;
+
+
+@ManagedBean
+@SessionScoped
 public class Data {
+    
+    private Members m;
+    private HibernateUtil helper;
+    private Session session;
+    
+    public void addMember() {
+        m = new Members("Steve");
+        session = HibernateUtil.getSessionFactory().openSession();
+        session.save(m);
+        session.getTransaction().commit();
+        session.close();
+        
+    }
     
 }
