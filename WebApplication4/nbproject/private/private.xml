@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/conf/MANIFEST.MF</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/web/register.jsp</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/com/object/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/com/object/model/User.java</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/com/object/service/RegisterService.java</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/web/index.html</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/com/object/hibernate/util/HibernateUtil.java</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/web/home.jsp</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/com/jwt/hibernate/bean/user.java</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/com/object/controller/RegisterServlet.java</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/com/object/service/LoginService.java</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/web/login.jsp</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/web/css/style.css</file>
+            <file>file:/C:/Users/rohan/Documents/GitHub/-java/WebApplication4/src/java/HibernateUtil.java</file>
+        </group>
+    </open-files>
+</project-private>

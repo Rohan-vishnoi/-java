@@ -1,5 +1,5 @@
 package com.object.controller;
-
+ 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,77 +13,46 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-/**
- *
- * @author rohan
- */
-@WebServlet(urlPatterns = {"/RegisterServlet"})
+ 
+import com.object.model.User;
+import com.object.service.RegisterService;
+ 
+ 
 public class RegisterServlet extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegisterServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegisterServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
+     response.setContentType("text/html;charset=UTF-8");
+     PrintWriter out = response.getWriter();
+     String firstName = request.getParameter("firstName");
+     String middleName = request.getParameter("middleName");
+     String lastName = request.getParameter("lastName");
+     String email = request.getParameter("email");
+     String userId = request.getParameter("userId");
+     String password = request.getParameter("password");
+     User user = new User(firstName,middleName,lastName, email,userId, password);
+             
+     try { 
+         RegisterService registerService = new RegisterService();
+         boolean result = registerService.register(user);      
+         out.println("<html>");
+         out.println("<head>");      
+         out.println("<title>Registration Successful</title>");    
+         out.println("</head>");
+         out.println("<body>");
+         out.println("<center>");
+         if(result){
+             out.println("<h1>Thanks for Registering with us :</h1>");
+             out.println("To login with new UserId and Password<a href=login.jsp>Click here</a>");
+         }else{
+             out.println("<h1>Registration Failed</h1>");
+             out.println("To try again<a href=register.jsp>Click here</a>");
+         }
+         out.println("</center>");
+         out.println("</body>");
+         out.println("</html>");
+     } finally {       
+         out.close();
+     }
+}
 }

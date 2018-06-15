@@ -89,10 +89,10 @@
                    <tr></tr>
                    <tr></tr>
                    <tr>
-                       <td>
+                       
                            <input type="submit" value="Submit">
                            <input type="reset"  value="Reset">
-                       </td>
+                       
                    </tr>
                </table>
            </form>
