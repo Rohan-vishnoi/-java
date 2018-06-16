@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class  name="com.hibernate.bean.User" table="Student"/>
+  <id column="id" name="id" type="java.lang.Integer">
+      
+  </id>
+  <property column="firstname" name="firstname" type="java.lang.String" />
+  <property column="middlename" name="middlename" type="java.lang.String" />
+  <property column="lastname" name="lastname" type="java.lang.String" />
+  <property column="email" name="email" type="java.lang.String" />
+  <property column="userid" name="userid" type="java.lang.String" />
+  <property column="password" name="password" type="String" />
+</class>
+</hibernate-mapping>

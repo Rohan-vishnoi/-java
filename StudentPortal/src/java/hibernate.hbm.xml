@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  
+    <class name="PojoClass.PojoStd" table="StudentRegister">
+        <id column="Email" name="email" type="java.lang.String" />
+        <property column="StudentName" name="name" type="java.lang.String"/>
+        <property column="CourseName" name="course" type="string" />
+        <property column="RollNumber" name="roll" type="string" />
+       
+        <property column="City" name="city" type="java.lang.String" />
+        <property column="DOB" name="dob" type="java.lang.String" />
+    </class>
+</hibernate-mapping>
