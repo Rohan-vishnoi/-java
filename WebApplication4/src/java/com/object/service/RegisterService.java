@@ -21,7 +21,6 @@ public boolean register(User user){
          if (tx != null) {
              tx.rollback();
          }
-         e.printStackTrace();
      } finally {
          session.close();
      } 
