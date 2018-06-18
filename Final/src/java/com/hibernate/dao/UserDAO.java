@@ -15,6 +15,8 @@ public class UserDAO {
     public void addUserDetails(String firstname,String middlename,String lastname,String email,String password,String userid) {
         
         try {
+            
+           
             Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
 
             SessionFactory sessionFactory = configuration.buildSessionFactory();
@@ -33,9 +35,11 @@ public class UserDAO {
             session.save(user);
             transaction.commit();
             System.out.println("\n\n Details Added \n");
+            session.close();
         }catch (HibernateException e) {
             System.out.println(e.getMessage());
             System.out.println("error");
+            
         }
     }
     
